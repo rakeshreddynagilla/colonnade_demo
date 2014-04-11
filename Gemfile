@@ -42,3 +42,5 @@ gem 'spring',        group: :development
 gem "bootstrap-sass", :git => 'https://github.com/twbs/bootstrap-sass.git', :branch => 'master'
 gem 'font-awesome-sass'
 gem 'simple_form'
+
+gem 'rails_12factor', group: :production
