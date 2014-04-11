@@ -1,0 +1,39 @@
+// Set the correct sprite paths
+@import "bootstrap";
+//= depend_on_asset "bootstrap/glyphicons-halflings-regular.eot"
+//= depend_on_asset "bootstrap/glyphicons-halflings-regular.svg"
+//= depend_on_asset "bootstrap/glyphicons-halflings-regular.ttf"
+//= depend_on_asset "bootstrap/glyphicons-halflings-regular.woff"
+
+.navbar {
+  font: verdana;
+  .navbar-inner{
+    background-color:#B6DED4;
+    background-image:none;
+  }
+  .nav {
+    color: #ffffff;
+  }
+  .subnav{
+    background-color: #216477;
+  }
+  .brand {
+    padding-left: 0px;
+    padding-right: 10px;
+    margin: 0 0 0 -5px;
+    width: 700px;
+  }
+}
+
+.footer {
+    border-top: 1px solid #E5E5E5;
+    margin-top: 45px;
+    padding: 35px 0 36px;
+    text-align: center;
+}
+
+.main_image{
+	display: block;
+	margin-left: 45%;
+	margin-right: 50%;
+}

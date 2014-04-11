@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Colonnade</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="container-fluid">
+			<a class="brand" href="/"><%= image_tag "main_image.jpg",:size => "240x150", class: "main_image"%><span style="width:auto;display:inline-block;font-size:20px;color:white;">Contact Info?</span></a>
+		</div>		
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-3">
+			<ul>
+				<li><%= link_to('Events Calendar', events_path ) %></li>
+				<li><%= link_to('Contact Us', contact_us_path ) %></li>
+				<li><%= link_to('Management',management_info_path) %></li>
+			</ul>
+		</div>
+		<div class="col-md-9">
+			<%= yield %>
+		</div>
+	</div>
+	
+</div>
+<div class="footer">
+	Copyright 2014 © Rock8y Arts<br>
+	Loaded <%= Time.now.asctime %>
+</div>
+</body>
+</html>
