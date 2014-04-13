@@ -13,6 +13,7 @@ class HomesController < ApplicationController
   end
   
   def index
+    @user = User.new
   end
 
   # GET /homes/1
