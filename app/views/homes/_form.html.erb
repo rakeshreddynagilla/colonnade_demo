@@ -1,11 +1,11 @@
 <br/>
 <br/>
-<h4>Sign up for Updates:</h4>
-<%= simple_form_for('User') do |f| %>
+<h4>Sign up !</h4>
+<%= simple_form_for("home",url: "user_info", method: 'post', remote: true) do |f| %>
 	<%= f.input :first_name %>
 	<%= f.input :last_name %>
 	<%= f.input :email %>
 	<%= f.input :phone_number %>
 	<br/>
-	<%=f.button :submit, "Sign up"%>
+	<%=button_to "Sign up",user_info_path, remote: true %>
 <% end %>

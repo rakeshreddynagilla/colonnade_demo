@@ -16,68 +16,24 @@ class HomesController < ApplicationController
     @user = User.new
   end
 
-  # GET /homes/1
-  # GET /homes/1.json
-  def show
+  def amenities
   end
 
-  # GET /homes/new
-  def new
-    @home = Home.new
+  def get_involved
   end
 
-  # GET /homes/1/edit
-  def edit
+  def rules
   end
 
-  # POST /homes
-  # POST /homes.json
-  def create
-    @home = Home.new(home_params)
-
+  def add_user_information
+    user = User.new(params[:home])
+    user.save!
     respond_to do |format|
-      if @home.save
-        format.html { redirect_to @home, notice: 'Home was successfully created.' }
-        format.json { render :show, status: :created, location: @home }
-      else
-        format.html { render :new }
-        format.json { render json: @home.errors, status: :unprocessable_entity }
-      end
+      format.json {render json: '1'}
     end
   end
 
-  # PATCH/PUT /homes/1
-  # PATCH/PUT /homes/1.json
-  def update
-    respond_to do |format|
-      if @home.update(home_params)
-        format.html { redirect_to @home, notice: 'Home was successfully updated.' }
-        format.json { render :show, status: :ok, location: @home }
-      else
-        format.html { render :edit }
-        format.json { render json: @home.errors, status: :unprocessable_entity }
-      end
-    end
+  def user_attributes
+    params.require(:home).permit(:first_name, :last_name, :email, :phone_number)
   end
-
-  # DELETE /homes/1
-  # DELETE /homes/1.json
-  def destroy
-    @home.destroy
-    respond_to do |format|
-      format.html { redirect_to homes_url }
-      format.json { head :no_content }
-    end
-  end
-
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_home
-      @home = Home.find(params[:id])
-    end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def home_params
-      params[:home]
-    end
 end

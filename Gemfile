@@ -44,3 +44,5 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 
 gem 'rails_12factor', group: :production
+gem 'twitter-bootswatch-rails', :github => 'scottvrosenthal/twitter-bootswatch-rails'
+gem 'therubyracer'

@@ -11,27 +11,30 @@
 <div class="navbar">
 	<div class="navbar-inner">
 		<div class="container-fluid">
-			<a class="brand" href="/"><%= image_tag "main_image.jpg",:size => "240x150", class: "main_image"%><span style="width:auto;display:inline-block;font-size:20px;color:white;">Contact Info?</span></a>
-		</div>		
+			<div class="col-sm-1">
+				
+			</div>
+			<a class="brand" href="/"><%= image_tag "main_image.jpg",:size => "300x150"%><span style="width:auto;display:inline-block;font-size:78px;color:grey;">Colonnade</span></a>
+		</div>
+		<div class="subnav">
+			<div class="container">
+				<ul class="nav nav-pills">
+					<li><%= link_to('About', '/' ) %></li>
+					<li><%= link_to('Amenities', amenities_path ) %></li>
+					<li><%= link_to('Contacts', contact_us_path ) %></li>
+					<li><%= link_to('Get Involved', get_involved_path ) %></li>
+					<li><%= link_to('Rules',rules_path) %></li>
+					<li><%= link_to('The Board of Directors',management_info_path) %></li>
+					<li><%= link_to('Upcoming Events',events_path) %></li>
+				</ul>
+				
+			</div>
+		</div>
 	</div>
 </div>
 <div class="container">
 	<div class="row">
-		<div class="col-md-3">
-				<%= link_to('Events Calendar', events_path ) %>
-		</div>
-		<div class="col-md-3">
-			<%= link_to('Contact Us', contact_us_path ) %>
-		</div>
-		<div class="col-md-3">
-			<%= link_to('Management',management_info_path) %>
-		</div>
-		<div class="col-md-3">
-			<%= link_to('Services',management_info_path) %>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-3">
+		<div class="col-md-2">
 			<%= render 'homes/form' %>
 		</div>
 		<div class="col-md-9">
