@@ -39,10 +39,12 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 #Added
-gem "bootstrap-sass", :git => 'https://github.com/twbs/bootstrap-sass.git', :branch => 'master'
+gem "bootstrap-sass"
 gem 'font-awesome-sass'
 gem 'simple_form'
 
 gem 'rails_12factor', group: :production
 gem 'twitter-bootswatch-rails', :github => 'scottvrosenthal/twitter-bootswatch-rails'
 gem 'therubyracer'
+gem 'devise'
+gem 'letter_opener'

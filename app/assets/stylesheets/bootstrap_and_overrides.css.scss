@@ -7,9 +7,9 @@
 
 .navbar {
   font: verdana;
-  .navbar-inner{
-    background-color:#808080;
-    background-image:none;
+  .container-fluid{
+    background-image:url(asset-path('banner.png'));
+    background-repeat: repeat-x;
   }
   .nav {
     color: #ffffff;
